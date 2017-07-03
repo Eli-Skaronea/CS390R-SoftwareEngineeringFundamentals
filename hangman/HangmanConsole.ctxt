@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=HangmanConsole
+comment0.text=\n\ Class\ HangmanConsole\ includes\ a\ static\ main\ method\ that\n\ reads\ a\ dictionary\ of\ words\ to\ be\ used\ during\ the\ game,\n\ then\ plays\ a\ game\ with\ the\ user\ via\ the\ console.\n\ @author\ Dr.\ Jody\ Paul\n\ @version\ 1.2\n
+comment1.params=
+comment1.target=HangmanConsole()
+comment1.text=\n\ Ensure\ no\ visible\ constructor\ for\ this\ utility\ class.\n
+comment2.params=args
+comment2.target=void\ main(java.lang.String[])
+comment2.text=\n\ Driver\ to\ run\ the\ hangman\ game.\n\ @param\ args\ ignored\n\ @throws\ FileNotFoundException\ if\ dictionary\ file\ not\ available\n
+comment3.params=console\ hanager
+comment3.target=void\ playGame(java.util.Scanner,\ HangmanManager)
+comment3.text=\n\ Plays\ one\ game\ with\ the\ user.\n\ @param\ console\ the\ Scanner\ console\ for\ user\ interaction\n\ @param\ hanager\ the\ hangman\ manager\n
+comment4.params=hanager
+comment4.target=void\ showResults(HangmanManager)
+comment4.text=\n\ Report\ the\ results\ of\ the\ game,\n\ including\ showing\ the\ answer\ if\ appropriate.\n\ @param\ hanager\ the\ hangman\ play\ manager\n
+numComments=5

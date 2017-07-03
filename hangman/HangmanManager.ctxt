@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=HangmanManager
+comment0.text=\n\ A\ HangmanManager\ keeps\ track\ of\ the\ state\ of\ a\ game\ of\ hangman.\n\ Methods\ provide\ access\ to\ the\ current\ set\ of\ guesses,\n\ number\ of\ wrong\ guesses\ remaining,\ and\ the\ current\ pattern\n\ to\ be\ displayed\ to\ the\ user.\n\ The\ <CODE>record</CODE>\ method\ updates\ state\ by\ recording\ a\ new\ guess\n\ and\ updating\ the\ other\ values\ appropriately.\n\ <P>\n\ Implementing\ classes\ must\ include\ a\ constructor\ as\ follows.\n\ </P><PRE>\n\ public\ HangmanManager(final\ List&lt;String&gt;\ dictionary,\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ final\ int\ length,\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ final\ int\ wrongGuessLimit)\n\ </PRE>\n\ <UL>\n\ <LI>The\ dictionary\ parameter\ is\ a\ list\ of\ candidate\ words.</LI>\n\ <LI>The\ length\ parameter\ is\ the\ length\ of\ a\ goal\ word.</LI>\n\ <LI>The\ wrongGuessLimit\ parameter\ is\ the\ number\ of\ wrong\ guesses\ at\ which\n\ \ \ \ \ \ \ \ \ the\ player\ loses.</LI>\n\ <LI>The\ constructor\ throws\ and\ IllegalArgumentException\ if\ length\ &lt;\ 1,\n\ \ \ \ \ wrongGuessLimit\ &lt;\ 1,\ or\ there\ is\ no\ word\ in\ the\ dictionary\ of\n\ \ \ \ \ the\ specified\ length.\n\ </LI>\n\ </UL>\n\n\ @author\ Dr.\ Jody\ Paul\n\ @version\ 1.4\n
+comment1.params=
+comment1.target=java.util.Set\ words()
+comment1.text=\n\ Access\ the\ set\ of\ candidate\ words;\n\ \ \ \ \ if\ size\ \=\=\ 0,\ contents\ are\ the\ actual\ goal\ word.\n\ @return\ the\ goal\ word\ or\ the\ candidate\ goal\ words\n
+comment2.params=
+comment2.target=int\ wrongGuessLimit()
+comment2.text=\n\ Access\ the\ limit\ of\ wrong\ guesses.\n\ @return\ the\ number\ of\ wrong\ guesses\ that\ results\ in\ a\ loss\n
+comment3.params=
+comment3.target=int\ guessesLeft()
+comment3.text=\n\ Access\ the\ number\ of\ wrong\ guesses\ that\ result\ in\ a\ loss\n\ \ \ \ \ given\ the\ current\ state\ of\ the\ game.\n\ @return\ the\ number\ of\ wrong\ guesses\ that\ would\ result\ in\ a\ loss\n
+comment4.params=
+comment4.target=java.util.SortedSet\ guesses()
+comment4.text=\n\ Access\ the\ set\ of\ letters\ already\ guessed\ by\ the\ user.\n\ @return\ the\ current\ set\ of\ letters\ guessed\ by\ the\ user\n
+comment5.params=
+comment5.target=java.lang.String\ pattern()
+comment5.text=\n\ Return\ the\ hangman-style\ display\ pattern\ of\ letters\ and\ dashes\n\ appropriate\ to\ the\ current\ state\ based\ on\ the\ letters\ already\n\ guessed\ and\ the\ goal.\n\ @throws\ IllegalStateException\ if\ there\ is\ no\ goal\ word\n\ @return\ the\ hangman-style\ pattern\ to\ be\ displayed\ to\ the\ user\n
+comment6.params=guess
+comment6.target=int\ record(char)
+comment6.text=\n\ Record\ state\ changes\ based\ on\ new\ letter\ guess.\n\ @throws\ IllegalStateException\ if\ no\ guesses\ left\ or\ no\ goal\ word\n\ @throws\ IllegalArgumentException\ if\ letter\ is\ already\ guessed\n\ @param\ guess\ the\ letter\ being\ guessed\n\ \ \ [Precondition\:\ must\ be\ lower-case\ letter]\n\ \ \ [Precondition\:\ must\ not\ be\ among\ letters\ already\ guessed]\n\ @return\ the\ number\ of\ occurrences\ of\ the\ guessed\ letter\ in\ the\ goal\n
+numComments=7
